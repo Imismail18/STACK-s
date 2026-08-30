@@ -30,6 +30,7 @@ class Stack:
     #Returns a string representation of the stack showing all elements from top to bottom.
     #Time complexity: O(n), where n is the number of elements in the stack.
     def __repr__(self):
+        if self.is_empty(): return "[]"
         items = []
 
         curr = self.top
