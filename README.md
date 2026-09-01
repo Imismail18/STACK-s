@@ -63,6 +63,10 @@ Stack/
 ├── README.md
 ```
 
+## Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
 ## Author
 
 Ismail - [@Imismail18](https://github.com/Imismail18)
