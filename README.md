@@ -28,6 +28,8 @@ The implementation is built with a `Node` class and a `Stack` class in [stack.py
 - `peek`: O(1)
 - `is_empty`: O(1)
 - `__repr__`: O(n)
+- `__len__`: O(1)
+- `__iter__`: O(n)
 
 ## Usage
 
