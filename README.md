@@ -11,8 +11,8 @@ This project implements a Stack data structure following the LIFO (Last In, Firs
 - `peek()` returns the top element without removing it
 - `is_empty()` checks whether the stack is empty
 - `__len__()` returns the current size of the stack
-- `__repr__` returns the list items
-- `__iter__` inables looping throgh the items of the stack
+- `__repr__()` returns the list items
+- `__iter__()` inables looping throgh the items of the stack
   
 The implementation is built with a `Node` class and a `Stack` class in [stack.py](stack.py).
 
