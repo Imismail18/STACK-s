@@ -22,15 +22,27 @@ class Stack:
         self.top = None
         self.size = 0
 
+    #return an iterator that yields the elements of the stack from top to bottom.
+    #Time complexity: O(n)
+    def __iter__(self):
+        items = []
+
+        curr = self.top
+        while curr is not None:
+            items.append(str(curr.data))
+            curr = curr.next
+
+        return reversed(items)
+
     #Returns the number of elements currently in the stack.
     #Time complexity: O(1)
-    def __len__(self):
-        return self.size
+    def __len__(self): return self.size
 
     #Returns a string representation of the stack showing all elements from top to bottom.
     #Time complexity: O(n), where n is the number of elements in the stack.
     def __repr__(self):
         if self.is_empty(): return "[]"
+            
         items = []
 
         curr = self.top
@@ -38,6 +50,7 @@ class Stack:
             items.append(str(curr.data))
             curr = curr.next
         items.append("None")
+        
         return "->".join(items)
 
     #Adds an element to the top of the stack and increases the size counter.
@@ -66,34 +79,37 @@ class Stack:
     #Time complexity: O(1)
     def peek(self):
         if self.is_empty(): raise ValueError("Empty Stack!")
+            
         return self.top.data
 
     #Checks if the stack is empty. Returns True if empty, False otherwise.
     #Time complexity: O(1)
-    def is_empty(self):
-        return self.top is None
+    def is_empty(self): return self.top is None
 
 
-# if __name__ == "__main__":
-#     print("==" * 30, "\nStack data structure:\nBeginning:\n", "__" * 30)
-#     stack = Stack()
+if __name__ == "__main__":
+    print("==" * 30, "\nStack data structure:\nBeginning:\n", "__" * 30)
+    stack = Stack()
 
-#     stack.push(10)
-#     stack.push(11)
-#     stack.push(12)
-#     stack.push(13)
-#     stack.push(14)
+    stack.push(10)
+    stack.push(11)
+    stack.push(12)
+    stack.push(13)
+    stack.push(14)
 
-#     print()
-#     print(stack.peek())
-#     print()
-#     print(repr(stack))
-#     print()
-#     print(stack.pop())
-#     print()
-#     print(stack)
-#     print()
-#     print(len(stack))
-#     print()
-#     print(stack.is_empty())
-#     print("==" * 30, "\nStack data structure - End\n")
+    print()
+    print(stack.peek())
+    print()
+    print(repr(stack))
+    print()
+    print(stack.pop())
+    print()
+    print(stack)
+    print()
+    print(len(stack))
+    print()
+    print(stack.is_empty())
+
+    for i in stack: print(i)
+        
+    print("==" * 30, "\nStack data structure - End\n")
