@@ -22,7 +22,7 @@ class Stack:
         self.top = None
         self.size = 0
 
-    #return an iterator that yields the elements of the stack from top to bottom.
+    #return an iterator that yields the elements of the stack from top to bottom. note that the items are in string format.
     #Time complexity: O(n)
     def __iter__(self):
         items = []
